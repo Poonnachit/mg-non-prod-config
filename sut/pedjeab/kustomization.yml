@@ -3,11 +3,11 @@ kind: Kustomization
 
 configMapGenerator:
   - name: common
-    namespace: pedjeab
+    namespace: sut
     envs: 
     - ./common/.env
   - name: mg-cart
-    namespace: pedjeab
+    namespace: sut
     envs:
     - ./mg-cart/.env
 # Generator Option
