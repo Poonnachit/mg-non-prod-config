@@ -1,0 +1,15 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+configMapGenerator:
+  - name: common
+    namespace: pedjeab
+    envs: 
+    - ./common/.env
+  - name: mg-cart
+    namespace: pedjeab
+    envs:
+    - ./mg-cart/.env
+# Generator Option
+generatorOptions:
+  disableNameSuffixHash: true
